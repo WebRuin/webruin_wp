@@ -1759,6 +1759,17 @@ function maybe_convert_table_to_utf8mb4( $table ) {
 		}
 	}
 
+	$table_details = $wpdb->get_row( "SHOW TABLE STATUS LIKE '$table'" );
+	if ( ! $table_details ) {
+		return false;
+	}
+
+	list( $table_charset ) = explode( '_', $table_details->Collation );
+	$table_charset = strtolower( $table_charset );
+	if ( 'utf8mb4' === $table_charset ) {
+		return true;
+	}
+
 	return $wpdb->query( "ALTER TABLE $table CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci" );
 }
 
@@ -2444,11 +2455,6 @@ function pre_schema_upgrade() {
 			$wpdb->query( "ALTER TABLE $wpdb->blogs CHANGE COLUMN archived archived varchar(1) NOT NULL default '0'" );
 			$wpdb->query( "ALTER TABLE $wpdb->blogs CHANGE COLUMN archived archived tinyint(2) NOT NULL default 0" );
 		}
-	}
-
-	if ( $wp_current_db_version < 30133 ) {
-		// dbDelta() can recreate but can't drop the index.
-		$wpdb->query( "ALTER TABLE $wpdb->terms DROP INDEX slug" );
 	}
 
 	// Upgrade versions prior to 4.2.

@@ -1,0 +1,174 @@
+// Place all the styles related to the learn controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.learn_box {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 688px;
+}
+
+.learn_box .treehouse_learn,
+.learn_box .firehoseproject,
+.learn_box .csstricks,
+.learn_box .codrops,
+.learn_box .codyhouse,
+.learn_box .mdn,
+.learn_box .msdn {
+  padding: 0;
+  margin: 2px;
+  float: left;
+  height: calc(50vh - 4px);
+  width: calc(33.333333% - 4px);
+  box-sizing: content-box;
+}
+.learn_box .treehouse_learn:hover,
+.learn_box .firehoseproject:hover,
+.learn_box .csstricks:hover,
+.learn_box .codrops:hover,
+.learn_box .codyhouse:hover,
+.learn_box .mdn:hover,
+.learn_box .msdn:hover {
+  position: relative;
+}
+
+.learn_box .treehouse_learn {
+  background-image: url('img/teamtreehouse-big.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.learn_box .treehouse_learn {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/teamtreehouse-big.png');
+}
+.learn_box .treehouse_learn:hover:before {
+  content: 'Team Treehouse';
+  top: 0;
+  left: 0;
+  opacity: 1;
+  padding: 2px;
+  font-size: 1.25rem;
+  color: rgb(252, 244, 237);
+  background-color: rgb(64, 45, 28);
+}
+
+.learn_box .firehoseproject {
+  background-image: url('img/firehoseproject.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
+}
+.learn_box .firehoseproject:hover {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/.firehoseproject.png');
+}
+.learn_box .firehoseproject:hover:before {
+  content: 'The Firehose Project';
+  top: 0;
+  left: 0;
+  padding: 2px;
+  font-size: 1.25rem;
+  color: rgb(252, 244, 237);
+  background-color: rgb(64, 45, 28);
+}
+
+.learn_box .csstricks {
+  background-image: url('img/css-tricks.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
+}
+.learn_box .css-tricks:hover {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/.css-tricks.png');
+}
+.learn_box .treehouse_learn:hover:before {
+  content: 'CSS Tricks';
+  top: 0;
+  left: 0;
+  padding: 2px;
+  font-size: 1.25rem;
+  color: rgb(252, 244, 237);
+  background-color: rgb(64, 45, 28);
+}
+
+.learn_box .codrops {
+  background-image: url('img/codrops.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}.learn_box .codrops {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/.codrops.png');
+}
+.learn_box .codrops:hover:before {
+  content: 'Codrops';
+  top: 0;
+  left: 0;
+  padding: 2px;
+  font-size: 1.25rem;
+  color: rgb(252, 244, 237);
+  background-color: rgb(64, 45, 28);
+}
+
+.learn_box .codyhouse {
+  background-image: url('img/codrops.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.learn_box .codyhouse {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/.codyhouse.png');
+}
+.learn_box .treehouse_learn:hover:before {
+  content: 'Codyhouse';
+  top: 0;
+  left: 0;
+  padding: 2px;
+  font-size: 1.25rem;
+  color: rgb(252, 244, 237);
+  background-color: rgb(64, 45, 28);
+}
+
+.learn_box .mdn {
+  background-image: url('img/mdn.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.learn_box .mdn {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/.mdn.png');
+} 
+.learn_box .mdn:hover:before {
+  content: 'Mozilla Developer Network';
+  top: 0;
+  left: 0;
+  padding: 2px;
+  font-size: 1.25rem;
+  color: rgb(252, 244, 237);
+  background-color: rgb(64, 45, 28);
+}
+
+.learn_box .msdn {
+  background-image: url('img/msdn.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.learn_box .msdn {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/.msdn.png');
+}
+.learn_box .msdn:hover:before {
+  content: 'Microsoft Developer Network';
+  top: 0;
+  left: 0;
+  padding: 2px;
+  font-size: 1.25rem;
+  color: rgb(252, 244, 237);
+  background-color: rgb(64, 45, 28);
+}
